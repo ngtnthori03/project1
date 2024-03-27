@@ -4,10 +4,6 @@
  */
 package model;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f1300c55166aa38fbd11e6b0f6dd28a885a0b0b7
 import java.util.Date;
 import util.data.DataField;
 import util.data.DataId;
@@ -17,16 +13,9 @@ import util.data.DataTable;
  *
  * @author ngtnthori03
  *
- * CREATE TABLE VOUCHER
- * (
- *     MAV         VARCHAR(10) PRIMARY KEY,
- *     GIATRI      FLOAT,
- *     NGAYBATDAU  DATE,
- *     NGAYKETTHUC DATE,
- *     DIEUKIEN    FLOAT,
- *     ngay_tao    DATETIME,
- *     TRANG_THAI  VARCHAR(20) -- đang hoạt động đã hủy
- * )
+ * CREATE TABLE VOUCHER ( MAV VARCHAR(10) PRIMARY KEY, GIATRI FLOAT, NGAYBATDAU
+ * DATE, NGAYKETTHUC DATE, DIEUKIEN FLOAT, ngay_tao DATETIME, TRANG_THAI
+ * VARCHAR(20) -- đang hoạt động, đã hủy )
  */
 @DataTable(name = "VOUCHER")
 public class VoucherModel {
@@ -42,15 +31,13 @@ public class VoucherModel {
     private Date ngayBatDau;
 
     @DataField(name = "NGAYKETTHUC")
-    private Date ngyKetThuc;
+    private Date ngayKetThuc;
 
     @DataField(name = "DIEUKIEN")
     private double diauKien;
 
     @DataField(name = "ngay_tao")
-    private Data ngayTao;
-<<<<<<< HEAD
-=======
+    private Date ngayTao;
 
     @DataField(name = "TRANG_THAI")
     private String trangThai;
@@ -60,16 +47,11 @@ public class VoucherModel {
      */
     public VoucherModel() {
     }
->>>>>>> f1300c55166aa38fbd11e6b0f6dd28a885a0b0b7
-
-    @DataField(name = "TRANG_THAI")
-    private String trangThai;
-
-    public VoucherModel(String maVoucher, double giaTri, Date ngayBatDau, Date ngyKetThuc, double diauKien, Data ngayTao, String trangThai) {
+    public VoucherModel(String maVoucher, double giaTri, Date ngayBatDau, Date ngyKetThuc, double diauKien, Date ngayTao, String trangThai) {
         this.maVoucher = maVoucher;
         this.giaTri = giaTri;
         this.ngayBatDau = ngayBatDau;
-        this.ngyKetThuc = ngyKetThuc;
+        this.ngayKetThuc = ngayKetThuc;
         this.diauKien = diauKien;
         this.ngayTao = ngayTao;
         this.trangThai = trangThai;
@@ -99,12 +81,12 @@ public class VoucherModel {
         this.ngayBatDau = ngayBatDau;
     }
 
-    public Date getNgyKetThuc() {
-        return ngyKetThuc;
+    public Date getNgayKetThuc() {
+        return ngayKetThuc;
     }
 
-    public void setNgyKetThuc(Date ngyKetThuc) {
-        this.ngyKetThuc = ngyKetThuc;
+    public void setNgayKetThuc(Date ngayKetThuc) {
+        this.ngayKetThuc = ngayKetThuc;
     }
 
     public double getDiauKien() {
@@ -115,11 +97,11 @@ public class VoucherModel {
         this.diauKien = diauKien;
     }
 
-    public Data getNgayTao() {
+    public Date getNgayTao() {
         return ngayTao;
     }
 
-    public void setNgayTao(Data ngayTao) {
+    public void setNgayTao(Date ngayTao) {
         this.ngayTao = ngayTao;
     }
 
@@ -130,4 +112,5 @@ public class VoucherModel {
     public void setTrangThai(String trangThai) {
         this.trangThai = trangThai;
     }
+
 }
